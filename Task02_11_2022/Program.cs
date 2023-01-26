@@ -61,7 +61,7 @@ namespace Task02_11_2022
                 Console.WriteLine("нет корней");
             }
         }
-        static void Main(string[] args)
+        static void Task2()
         {
             //Задача 1
             Console.WriteLine("Task1");
@@ -201,6 +201,118 @@ namespace Task02_11_2022
                 default:
                     Console.WriteLine("another");
                     break;
+            }
+
+        }
+        static void Main(string[] args)
+        {
+            /*int n = 5;
+            double sum = 0.0;
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Введите зарплату: ");
+                double salary = double.Parse(Console.ReadLine());
+                //sum = sum+ salary;
+                sum += salary;
+                if(sum>=10)
+                {
+                    break;
+                }
+            }
+            
+            int j = 0;           
+            while(j<2)
+            {
+                Console.WriteLine("Введите зарплату: ");
+                double salary = double.Parse(Console.ReadLine());
+                //sum = sum+ salary;
+                sum += salary;
+
+                j++;
+            }
+
+            int a = int.Parse(Console.ReadLine());
+            double b= int.Parse(Console.ReadLine());
+            while (a!=b)
+            {
+                Console.WriteLine("enter b");
+                b= int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("выполнено");
+
+
+            int c= int.Parse(Console.ReadLine());
+            double d;
+            do
+            {
+                d = int.Parse(Console.ReadLine());
+            } while (c != d);*/
+
+            /*int n = int.Parse(Console.ReadLine());
+            String mast = String.Empty;
+            if(n==1)
+            {
+                mast = "Черви";
+            } 
+            else if(n==2)
+            {
+                Console.WriteLine("Бубны");
+            }
+            else if(n==3)
+            {
+                Console.WriteLine("Пики");
+            }
+            else if(n==4)
+            {
+                Console.WriteLine("Трефы");
+            }
+            else
+            {
+                Console.WriteLine("Вы ввели неверное значение");
+            }
+            int k= int.Parse(Console.ReadLine());
+            String znach = String.Empty;
+            switch(k)
+            {
+                case 6: znach = "шестерка"; break;
+                case 7: znach = "семерка"; break;
+                case 8: znach = "восьмерка"; break;
+                case 9: znach = "девятка"; break;
+                case 10: znach = "десятка"; break;
+                case 11: znach = "валет"; break;
+                case 12: znach = "дама"; break;
+                case 13: znach = "король"; break;
+                case 14: znach = "туз"; break;
+                default: znach = "неверное значение"; break;
+
+            }
+            Console.WriteLine(znach + " " + mast);*/
+            /*
+            //Задача 1
+            decimal sum = Convert.ToDecimal(Console.ReadLine());
+            decimal percent = 0.07M;
+            byte countOfMonth = Convert.ToByte(Console.ReadLine());
+            for(int i=0;i<countOfMonth;i++)
+            {
+                sum = sum + sum * percent;
+            }
+            //Задача 2
+            int j = 0;
+            while(j<countOfMonth)
+            {
+                sum = sum + sum * percent;
+
+                j++;
+            }
+            */
+            //Задача 3
+            for(int i=1;i<10;i++)
+            {
+                for(int k=1;k<10;k++)
+                {
+                    Console.Write(i * k + "\t");
+                }
+                Console.WriteLine();
             }
             Console.ReadKey();
 
