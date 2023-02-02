@@ -204,7 +204,7 @@ namespace Task02_11_2022
             }
 
         }
-        static void Main(string[] args)
+        static void Task3()
         {
             /*int n = 5;
             double sum = 0.0;
@@ -306,14 +306,153 @@ namespace Task02_11_2022
             }
             */
             //Задача 3
-            for(int i=1;i<10;i++)
+            for (int i = 1; i < 10; i++)
             {
-                for(int k=1;k<10;k++)
+                for (int k = 1; k < 10; k++)
                 {
                     Console.Write(i * k + "\t");
                 }
                 Console.WriteLine();
             }
+        }
+        static void Task4()
+        {
+
+        }
+
+        struct Person
+        {
+            public string name;
+            public byte age;
+
+            //конструктор
+            public Person(string name, byte age2)
+            {
+                //this относится к структуре
+                this.name = name;
+                age = age2;
+            }
+            public Person(string name)
+            {
+                this.name = name;
+                age = 10;
+            }
+            public void PrintOnConsole()
+            {
+                Console.WriteLine(name + "\t" + age);
+            }
+
+        }
+        struct Point
+        {
+            private int x;
+            private int y;
+
+            //свойство
+            public int X
+            {
+                get
+                {
+                    return x;
+                }
+                //запись
+                set
+                {
+                    x = value;
+                }
+            }
+            public int Y
+            {
+                //чтение
+                get
+                {
+                    return y;
+                }
+            }
+
+            public Point(int a,int b)
+            {
+                x = a;
+                y = b;
+
+            }
+            public void Print()
+            {
+                Console.WriteLine(x + " " + y);
+            }
+        }
+        enum WeekDay
+        {
+            Monday=1, Tuesday,Wednesday,Thuirsday,Friday
+        }
+        static void AskNameAndSayHello()
+        {
+            Console.WriteLine("Как тебя зовут?");
+            string name = Console.ReadLine();
+            Console.WriteLine($"Привет {name}");
+        }
+        static int Sum(int first, int second)
+        {
+            int result = first + second;
+
+            return result;
+        }
+
+        struct StructA
+        {
+            public string text;
+            public StructB Something(int ind)
+            {
+                StructB structB = new StructB();
+                structB.sybmbol = text[ind];
+
+                return structB ;
+            }
+        }
+        struct StructB
+        {
+            public char sybmbol;
+        }
+        struct Point3D
+        {
+            public int X;
+            public int Y;
+            public int Z;
+            public void Print()
+            {
+                Console.WriteLine(X + " " + Y + " " + Z);
+            }
+            public void Print2(int d)
+            {
+                Console.WriteLine(X+d + " " + Y+d + " " + Z+d);
+            }
+        }
+        static void Main(string[] args)
+        {
+            /*Person p = new Person();
+            p.name = "Dina";
+            p.PrintOnConsole();
+
+            Person p2;
+            p.name = "Shalva";
+            p.PrintOnConsole();
+
+            Person p3 = new Person("Mary",12);
+            p3.PrintOnConsole();
+
+            Point point1 = new Point(5,2);
+           
+            point1.Print();
+
+            WeekDay day = WeekDay.Friday;
+            int a = (int)day;
+
+            AskNameAndSayHello();
+            AskNameAndSayHello();
+
+            //int q = ;
+            Console.WriteLine(Sum(5, 2));
+            int w = Sum(10, 2);*/
             Console.ReadKey();
 
         }
