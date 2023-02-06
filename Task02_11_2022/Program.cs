@@ -317,6 +317,33 @@ namespace Task02_11_2022
         }
         static void Task4()
         {
+            /*Person p = new Person();
+            p.name = "Dina";
+            p.PrintOnConsole();
+
+            Person p2;
+            p.name = "Shalva";
+            p.PrintOnConsole();
+
+            Person p3 = new Person("Mary",12);
+            p3.PrintOnConsole();
+
+            Point point1 = new Point(5,2);
+           
+            point1.Print();
+
+            WeekDay day = WeekDay.Friday;
+            int a = (int)day;
+
+            AskNameAndSayHello();
+            AskNameAndSayHello();
+
+            //int q = ;
+            Console.WriteLine(Sum(5, 2));
+            int w = Sum(10, 2);*/
+        }
+        static void Task5()
+        {
 
         }
 
@@ -427,32 +454,116 @@ namespace Task02_11_2022
                 Console.WriteLine(X+d + " " + Y+d + " " + Z+d);
             }
         }
+        static void PrintArrayOnConsole(int[] array)
+        {
+            for(int i=0;i<array.Length;i++)
+            {
+                Console.Write(array[i]+" ");
+            }
+        }
+        static int CountOfNechet(int[] array)
+        {
+            int result = 0;
+            for(int i=0;i<array.Length;i++)
+            {
+                if(array[i]%2!=0)
+                {
+                    result++;
+                }
+            }
+            return result;
+        }
+        static int CountOfPolozhitel(int[] array)
+        {
+            int result = 0;
+            for(int i=0;i<array.Length;i++)
+            {
+                if(array[i]>=0)
+                {
+                    result++;
+                }
+            }
+            return result;
+        }
         static void Main(string[] args)
         {
-            /*Person p = new Person();
-            p.name = "Dina";
-            p.PrintOnConsole();
+            /*Console.WriteLine("Введите N=");
+            int N = int.Parse(Console.ReadLine());
+            //int[] arr1 = new int[N];
 
-            Person p2;
-            p.name = "Shalva";
-            p.PrintOnConsole();
+            Random random = new Random();
+            for (int i = 0; i < N; i++)
+            {
+                arr1[i] = random.Next(-10, 10); //вернет случайное число в заданном диапазоне
+            }
+            foreach (int element in arr1)
+            {
+                Console.Write(element + ", ");
+            }
 
-            Person p3 = new Person("Mary",12);
-            p3.PrintOnConsole();
+            Console.WriteLine("Введите M=");
+            int M= int.Parse(Console.ReadLine());
+            int[,] arr2 = new int[N, M];
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                {
+                    arr2[i, j] = random.Next(-10, 10);
+                }
+            }
+            foreach (int element in arr2)
+            {
+                Console.Write(element + ", ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                {
+                    Console.Write(arr2[i, j] + ", ");
+                }
+                Console.WriteLine();
+            }
 
-            Point point1 = new Point(5,2);
-           
-            point1.Print();
+            int[][] arr3 = new int[N][];
+            for(int i=0;i<N;i++)
+            {
+                int q = random.Next(1, 5);
+                arr3[i] = new int[q];
+            }
 
-            WeekDay day = WeekDay.Friday;
-            int a = (int)day;
 
-            AskNameAndSayHello();
-            AskNameAndSayHello();
+            String s1 = "Dina";
+            String s2 = "Dina";
+            if(s1==s2)
+            {
+                Console.WriteLine("равны");
+            }
+            int N = int.Parse(Console.ReadLine());
+            int[] a1 = new int[N];
+            Random r = new Random();
 
-            //int q = ;
-            Console.WriteLine(Sum(5, 2));
-            int w = Sum(10, 2);*/
+            int countMinus = 0, countPlus = 0;
+            for(int i=0;i<N;i++)
+            {
+                a1[i] = r.Next(-10, 10);
+                if(a1[i]>=0)
+                {
+                    countPlus++;
+                }
+                else
+                {
+                    countMinus++;
+                }
+            }*/
+
+            int[] b = new int[7] { -1, -2, 3, 4, 5, 6, 7 };
+            PrintArrayOnConsole(b);
+            int r1=CountOfNechet(b);
+            int r2=CountOfPolozhitel(b);
+    
+
+            Console.WriteLine("\n"+r1 + "\t" + r2);
             Console.ReadKey();
 
         }
