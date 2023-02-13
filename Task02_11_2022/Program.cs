@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -344,6 +345,146 @@ namespace Task02_11_2022
         }
         static void Task5()
         {
+            /*Console.WriteLine("Введите N=");
+            int N = int.Parse(Console.ReadLine());
+            //int[] arr1 = new int[N];
+
+            Random random = new Random();
+            for (int i = 0; i < N; i++)
+            {
+                arr1[i] = random.Next(-10, 10); //вернет случайное число в заданном диапазоне
+            }
+            foreach (int element in arr1)
+            {
+                Console.Write(element + ", ");
+            }
+
+            Console.WriteLine("Введите M=");
+            int M= int.Parse(Console.ReadLine());
+            int[,] arr2 = new int[N, M];
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                {
+                    arr2[i, j] = random.Next(-10, 10);
+                }
+            }
+            foreach (int element in arr2)
+            {
+                Console.Write(element + ", ");
+            }
+            Console.WriteLine();
+            for (int i = 0; i < N; i++)
+            {
+                for (int j = 0; j < M; j++)
+                {
+                    Console.Write(arr2[i, j] + ", ");
+                }
+                Console.WriteLine();
+            }
+
+            int[][] arr3 = new int[N][];
+            for(int i=0;i<N;i++)
+            {
+                int q = random.Next(1, 5);
+                arr3[i] = new int[q];
+            }
+
+
+            String s1 = "Dina";
+            String s2 = "Dina";
+            if(s1==s2)
+            {
+                Console.WriteLine("равны");
+            }
+            int N = int.Parse(Console.ReadLine());
+            int[] a1 = new int[N];
+            Random r = new Random();
+
+            int countMinus = 0, countPlus = 0;
+            for(int i=0;i<N;i++)
+            {
+                a1[i] = r.Next(-10, 10);
+                if(a1[i]>=0)
+                {
+                    countPlus++;
+                }
+                else
+                {
+                    countMinus++;
+                }
+            }*/
+
+            int[] b = new int[7] { -1, -2, 3, 4, 5, 6, 7 };
+            PrintArrayOnConsole(b);
+            int r1 = CountOfNechet(b);
+            int r2 = CountOfPolozhitel(b);
+
+
+            Console.WriteLine("\n" + r1 + "\t" + r2);
+        }
+        static void Task6()
+        {
+            /*List<int> myList = new List<int>();
+            Random random = new Random();
+            myList.Add(random.Next(-10, 10));
+            myList.Add(random.Next(-10, 10));
+            myList.Add(random.Next(-10, 10));
+            myList.Add(random.Next(-10, 10));
+            myList.Add(random.Next(-10, 10));
+            int countOfPolozhitel=0, countOfOtritatel = 0;
+            foreach(int element in myList)
+            {
+                if(element>=0)
+                {
+                    countOfPolozhitel++;
+                }
+                else
+                {
+                    countOfOtritatel++;
+                }
+            }
+            for(int i=0;i<myList.Count; i++)
+            {
+                if(myList[i] >= 0)
+                {
+                    countOfPolozhitel++;
+                }
+                else
+                {
+                    countOfOtritatel++;
+                }
+            }
+            int[] a = new int[5];
+
+            List<Player> players = new List<Player>()
+            {
+                new Player()
+                {
+                    Name="A1",
+                    Skill=1
+                },
+                new Player()
+                {
+                    Name="A2",
+                    Skill=2
+                }
+            };
+            players.Add(
+                new Player()
+                {
+                    Name = "A3",
+                    Skill = 3
+                });
+
+            Dictionary<string, List<int>> products = new Dictionary<string, List<int>>();
+            products.Add("bread", new List<int>() { 5,4,2});
+            products.Add("apple", new List<int>() { 5, 4 });
+
+            ArrayList array = new ArrayList();
+            array.Add("Привет");
+            array.Add(5);
+            array.Add(new Player());*/
 
         }
 
@@ -485,85 +626,15 @@ namespace Task02_11_2022
             }
             return result;
         }
+        struct Player
+        {
+            public string Name;
+            public int Skill;
+        }
         static void Main(string[] args)
         {
-            /*Console.WriteLine("Введите N=");
-            int N = int.Parse(Console.ReadLine());
-            //int[] arr1 = new int[N];
+            
 
-            Random random = new Random();
-            for (int i = 0; i < N; i++)
-            {
-                arr1[i] = random.Next(-10, 10); //вернет случайное число в заданном диапазоне
-            }
-            foreach (int element in arr1)
-            {
-                Console.Write(element + ", ");
-            }
-
-            Console.WriteLine("Введите M=");
-            int M= int.Parse(Console.ReadLine());
-            int[,] arr2 = new int[N, M];
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < M; j++)
-                {
-                    arr2[i, j] = random.Next(-10, 10);
-                }
-            }
-            foreach (int element in arr2)
-            {
-                Console.Write(element + ", ");
-            }
-            Console.WriteLine();
-            for (int i = 0; i < N; i++)
-            {
-                for (int j = 0; j < M; j++)
-                {
-                    Console.Write(arr2[i, j] + ", ");
-                }
-                Console.WriteLine();
-            }
-
-            int[][] arr3 = new int[N][];
-            for(int i=0;i<N;i++)
-            {
-                int q = random.Next(1, 5);
-                arr3[i] = new int[q];
-            }
-
-
-            String s1 = "Dina";
-            String s2 = "Dina";
-            if(s1==s2)
-            {
-                Console.WriteLine("равны");
-            }
-            int N = int.Parse(Console.ReadLine());
-            int[] a1 = new int[N];
-            Random r = new Random();
-
-            int countMinus = 0, countPlus = 0;
-            for(int i=0;i<N;i++)
-            {
-                a1[i] = r.Next(-10, 10);
-                if(a1[i]>=0)
-                {
-                    countPlus++;
-                }
-                else
-                {
-                    countMinus++;
-                }
-            }*/
-
-            int[] b = new int[7] { -1, -2, 3, 4, 5, 6, 7 };
-            PrintArrayOnConsole(b);
-            int r1=CountOfNechet(b);
-            int r2=CountOfPolozhitel(b);
-    
-
-            Console.WriteLine("\n"+r1 + "\t" + r2);
             Console.ReadKey();
 
         }
