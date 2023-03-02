@@ -487,7 +487,10 @@ namespace Task02_11_2022
             array.Add(new Player());*/
 
         }
+        static void Task7()
+        {
 
+        }
         struct Person
         {
             public string name;
@@ -565,7 +568,6 @@ namespace Task02_11_2022
 
             return result;
         }
-
         struct StructA
         {
             public string text;
@@ -631,10 +633,86 @@ namespace Task02_11_2022
             public string Name;
             public int Skill;
         }
+
+        public static void RandomInitialization(int[] array)
+        {
+            Random random = new Random();
+            for(int i=0;i<array.Length;i++)
+            {
+                array[i] = random.Next(0, 10);
+            }
+        }
+        public static int SumAllElementsInArray(int[] array)
+        {
+            int sum = 0;
+            foreach (int element in array)
+            {
+                sum += element;
+            }
+            return sum;
+        }
+        public static void Add5(int[] array, int[] result)
+        {
+            for (int i = 0; i < array.Length; i++)
+            {
+                result[i] = array[i] + 5;
+            }
+        }
+        public static int RandomInitialization(int val1, int val2)
+        {
+            Random random = new Random();
+            val1 = random.Next(0, 10);
+            val2 = random.Next(0, 10);
+            return val1;
+        }
+        public static void RandomInitialization(ref int val1, ref int val2)
+        {
+            Random random = new Random();
+            val1 = random.Next(0, 10);
+            val2 = random.Next(0, 10);
+        }
+        public static void RandomInitializationRefOut(ref int val1, out int val2)
+        {
+            Random random = new Random();
+            val1 = random.Next(0, 10);
+            val2 = random.Next(0, 10);
+        }
+        public static void ShowArray(String s, String s2,params int[] array)
+        {
+            Console.WriteLine("############"+s);
+            for(int i=0;i<array.Length;i++)
+            {
+                Console.Write(array[i] + "\t");
+            }
+            Console.WriteLine("############" + s2);
+        }
+        public static void ShowArray(params int[] array)
+        {
+            Console.WriteLine("############");
+            for (int i = 0; i < array.Length; i++)
+            {
+                Console.Write(array[i] + "\t");
+            }
+            Console.WriteLine("############");
+        }
         static void Main(string[] args)
         {
-            
 
+            int[] a = new int[5];
+            int[] b = new int[2];
+            int[] c = new int[6];
+            RandomInitialization(a);
+            RandomInitialization(b);
+            RandomInitialization(c);
+            Console.WriteLine(SumAllElementsInArray(a) + SumAllElementsInArray(b) + SumAllElementsInArray(c));
+
+
+            int y=-1, z;
+            RandomInitializationRefOut(ref y,out z);
+
+            ShowArray("Hello","Bye",a);
+            ShowArray("Hello","Bye",3, 4, 5,6,7,8,9,10);
+            ShowArray();
             Console.ReadKey();
 
         }
