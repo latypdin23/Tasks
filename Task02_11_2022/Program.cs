@@ -489,7 +489,21 @@ namespace Task02_11_2022
         }
         static void Task7()
         {
+            int[] a = new int[5];
+            int[] b = new int[2];
+            int[] c = new int[6];
+            RandomInitialization(a);
+            RandomInitialization(b);
+            RandomInitialization(c);
+            Console.WriteLine(SumAllElementsInArray(a) + SumAllElementsInArray(b) + SumAllElementsInArray(c));
 
+
+            int y = -1, z;
+            RandomInitializationRefOut(ref y, out z);
+
+            ShowArray("Hello", "Bye", a);
+            ShowArray("Hello", "Bye", 3, 4, 5, 6, 7, 8, 9, 10);
+            ShowArray();
         }
         struct Person
         {
@@ -695,24 +709,27 @@ namespace Task02_11_2022
             }
             Console.WriteLine("############");
         }
-        static void Main(string[] args)
+
+        //занятие 13.03
+        static void Task8()
         {
 
-            int[] a = new int[5];
-            int[] b = new int[2];
-            int[] c = new int[6];
-            RandomInitialization(a);
-            RandomInitialization(b);
-            RandomInitialization(c);
-            Console.WriteLine(SumAllElementsInArray(a) + SumAllElementsInArray(b) + SumAllElementsInArray(c));
+        }
+        static void Main(string[] args)
+        {
+            //p1 - объект класса Student
+            Student.DeveloperName = "Dina Latypova";
 
+            Student s1 = new Student(5,"Ivan", "Ivanov");
+            Student s2 = new Student("Petya","Ivanov");
 
-            int y=-1, z;
-            RandomInitializationRefOut(ref y,out z);
+            Student s3 = new Student();
+            s3.Name = "Dina";
+            int q = s3.IdGetSet;
+            s3.IdGetSet = 111;
+            s3.ShowInfo();
 
-            ShowArray("Hello","Bye",a);
-            ShowArray("Hello","Bye",3, 4, 5,6,7,8,9,10);
-            ShowArray();
+            Console.WriteLine(s1.FullName);
             Console.ReadKey();
 
         }
