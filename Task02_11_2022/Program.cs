@@ -505,6 +505,7 @@ namespace Task02_11_2022
             ShowArray("Hello", "Bye", 3, 4, 5, 6, 7, 8, 9, 10);
             ShowArray();
         }
+
         struct Person
         {
             public string name;
@@ -713,15 +714,11 @@ namespace Task02_11_2022
         //занятие 13.03
         static void Task8()
         {
-
-        }
-        static void Main(string[] args)
-        {
             //p1 - объект класса Student
             Student.DeveloperName = "Dina Latypova";
 
-            Student s1 = new Student(5,"Ivan", "Ivanov");
-            Student s2 = new Student("Petya","Ivanov");
+            Student s1 = new Student(5, "Ivan", "Ivanov");
+            Student s2 = new Student("Petya", "Ivanov");
 
             Student s3 = new Student();
             s3.Name = "Dina";
@@ -730,6 +727,23 @@ namespace Task02_11_2022
             s3.ShowInfo();
 
             Console.WriteLine(s1.FullName);
+        }
+        static void Task9()
+        {
+
+        }
+        static void Main(string[] args)
+        {
+            Bank bank1 = new Bank(1,140.0,TypeBankAccount.Накопительный);
+            bank1.PrintOnScreen();
+            double suminDollar = bank1.GetSum / 70.0;
+            Bank bank2 = new Bank(2,suminDollar,TypeBankAccount.Накопительный);
+            bank2.PrintOnScreen('d');
+
+            Smartphone apple = new Smartphone();
+            apple.Name = "Iphone";
+            apple.Call();
+
             Console.ReadKey();
 
         }
