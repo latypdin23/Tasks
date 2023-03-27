@@ -66,22 +66,22 @@ namespace Task02_11_2022
         {
             //Задача 1
             Console.WriteLine("Task1");
-            int x=int.Parse(Console.ReadLine());
+            int x = int.Parse(Console.ReadLine());
             double y;
-            if(x>0)
+            if (x > 0)
             {
-                 y = Math.Sin(x);
+                y = Math.Sin(x);
             }
             else
             {
-                 y = Math.Cos(x);
+                y = Math.Cos(x);
             }
 
 
             //Задача 2
             Console.WriteLine("Task2");
             int a = int.Parse(Console.ReadLine());
-            if(a%2==0)
+            if (a % 2 == 0)
             {
                 Console.WriteLine("chetnoe");
             }
@@ -102,9 +102,9 @@ namespace Task02_11_2022
             Console.WriteLine("Введите рост третьего человека:");
             double person3 = double.Parse(Console.ReadLine());
 
-            if(person1==person2)
+            if (person1 == person2)
             {
-                if(person2==person3)
+                if (person2 == person3)
                 {
                     Console.WriteLine("Равны");
                 }
@@ -118,35 +118,35 @@ namespace Task02_11_2022
                 Console.WriteLine("1 и 2 не равны");
             }
 
-            if((person1==person2) && (person2==person3))
+            if ((person1 == person2) && (person2 == person3))
             {
                 Console.WriteLine("Равны");
             }
             //Задача 4
             Console.WriteLine("Task4");
             Console.WriteLine("Введите номер n");
-            byte n=byte.Parse(Console.ReadLine());
-            if(n==1)
+            byte n = byte.Parse(Console.ReadLine());
+            if (n == 1)
             {
                 Console.WriteLine("понедельник");
             }
-            else if(n==2)
+            else if (n == 2)
             {
                 Console.WriteLine("вторник");
             }
-            else if(n==3)
+            else if (n == 3)
             {
                 Console.WriteLine("среда");
             }
-            else if(n==4)
+            else if (n == 4)
             {
                 Console.WriteLine("четверг");
             }
-            else if(n==5)
+            else if (n == 5)
             {
                 Console.WriteLine("пятница");
             }
-            else if(n==6)
+            else if (n == 6)
             {
                 Console.WriteLine("суббота");
             }
@@ -160,7 +160,7 @@ namespace Task02_11_2022
             }
 
 
-            switch(n)
+            switch (n)
             {
                 case 1:
                     Console.WriteLine("понедельник");
@@ -556,7 +556,7 @@ namespace Task02_11_2022
                 }
             }
 
-            public Point(int a,int b)
+            public Point(int a, int b)
             {
                 x = a;
                 y = b;
@@ -569,7 +569,7 @@ namespace Task02_11_2022
         }
         enum WeekDay
         {
-            Monday=1, Tuesday,Wednesday,Thuirsday,Friday
+            Monday = 1, Tuesday, Wednesday, Thuirsday, Friday
         }
         static void AskNameAndSayHello()
         {
@@ -591,7 +591,7 @@ namespace Task02_11_2022
                 StructB structB = new StructB();
                 structB.sybmbol = text[ind];
 
-                return structB ;
+                return structB;
             }
         }
         struct StructB
@@ -609,22 +609,22 @@ namespace Task02_11_2022
             }
             public void Print2(int d)
             {
-                Console.WriteLine(X+d + " " + Y+d + " " + Z+d);
+                Console.WriteLine(X + d + " " + Y + d + " " + Z + d);
             }
         }
         static void PrintArrayOnConsole(int[] array)
         {
-            for(int i=0;i<array.Length;i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                Console.Write(array[i]+" ");
+                Console.Write(array[i] + " ");
             }
         }
         static int CountOfNechet(int[] array)
         {
             int result = 0;
-            for(int i=0;i<array.Length;i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                if(array[i]%2!=0)
+                if (array[i] % 2 != 0)
                 {
                     result++;
                 }
@@ -634,9 +634,9 @@ namespace Task02_11_2022
         static int CountOfPolozhitel(int[] array)
         {
             int result = 0;
-            for(int i=0;i<array.Length;i++)
+            for (int i = 0; i < array.Length; i++)
             {
-                if(array[i]>=0)
+                if (array[i] >= 0)
                 {
                     result++;
                 }
@@ -652,7 +652,7 @@ namespace Task02_11_2022
         public static void RandomInitialization(int[] array)
         {
             Random random = new Random();
-            for(int i=0;i<array.Length;i++)
+            for (int i = 0; i < array.Length; i++)
             {
                 array[i] = random.Next(0, 10);
             }
@@ -692,10 +692,10 @@ namespace Task02_11_2022
             val1 = random.Next(0, 10);
             val2 = random.Next(0, 10);
         }
-        public static void ShowArray(String s, String s2,params int[] array)
+        public static void ShowArray(String s, String s2, params int[] array)
         {
-            Console.WriteLine("############"+s);
-            for(int i=0;i<array.Length;i++)
+            Console.WriteLine("############" + s);
+            for (int i = 0; i < array.Length; i++)
             {
                 Console.Write(array[i] + "\t");
             }
@@ -730,22 +730,59 @@ namespace Task02_11_2022
         }
         static void Task9()
         {
-
-        }
-        static void Main(string[] args)
-        {
-            Bank bank1 = new Bank(1,140.0,TypeBankAccount.Накопительный);
+            Bank bank1 = new Bank(1, 140.0, TypeBankAccount.Накопительный);
             bank1.PrintOnScreen();
             double suminDollar = bank1.GetSum / 70.0;
-            Bank bank2 = new Bank(2,suminDollar,TypeBankAccount.Накопительный);
+            Bank bank2 = new Bank(2, suminDollar, TypeBankAccount.Накопительный);
             bank2.PrintOnScreen('d');
 
             Smartphone apple = new Smartphone();
             apple.Name = "Iphone";
             apple.Call();
-
-            Console.ReadKey();
+        }
+        static void Task10()
+        {
 
         }
+        static void Main(string[] args)
+        {
+
+            Employer e = new Employer();
+            e = Employer.LookupByName("Dina");  //в куче 2 объекта
+
+            Employer e2 = Employer.LookupByName("qwerty");  //в куче 1 объект
+
+            int a = 5;
+            long q = a; //неявное приведение
+
+
+            long w = 8888888888888888888;
+            int t = (int)w; //явно
+
+            ArrayList list = new ArrayList();
+
+
+            try
+            {
+                int num1 = 1;
+                int num2 = 1;
+                int res = num1 / num2;
+            }
+            catch (DivideByZeroException eee)
+            {
+                Console.WriteLine(eee.Message);
+            }
+            catch (Exception eee)
+            {
+                Console.WriteLine(eee.Message);
+            }
+            finally
+            {
+                Console.WriteLine("Поделили");
+            }
+            Console.ReadKey();
+        }
+
+      
     }
 }

@@ -46,6 +46,7 @@
     <Compile Include="Bank.cs" />
     <Compile Include="ButtonPhone.cs" />
     <Compile Include="Camera.cs" />
+    <Compile Include="Employer.cs" />
     <Compile Include="My\Car.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Phone.cs" />
