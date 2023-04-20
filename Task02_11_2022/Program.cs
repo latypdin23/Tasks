@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Task02_11_2022.Job;
+using Task02_11_2022.Stati;
 
 namespace Task02_11_2022
 {
@@ -742,11 +744,6 @@ namespace Task02_11_2022
         }
         static void Task10()
         {
-
-        }
-        static void Main(string[] args)
-        {
-
             Employer e = new Employer();
             e = Employer.LookupByName("Dina");  //в куче 2 объекта
 
@@ -780,6 +777,52 @@ namespace Task02_11_2022
             {
                 Console.WriteLine("Поделили");
             }
+        }
+        static void Task11()
+        {
+            Dog d1 = new Dog("Бобик");
+            Dog d2 = new Dog("Глаша");
+            Dog.Count = 9;
+            Dog d3 = new Dog("Жулик");
+
+            Message m = d3.Say;
+            m += Hello;
+            m += Bye;
+            
+            m();
+
+            Message m2 = delegate ()
+            {
+                Console.Write("qwerty");
+            };
+            m2();
+
+            Message m3 = () => { Console.Write("qwerty"); };
+
+
+
+
+            string[] people = { "Tom", "Bob", "Sam", "Tim", "Tomas", "Bill" };
+
+            var selectedPeople = people.Where(p => p.ToUpper().StartsWith("T")).OrderBy(p=>p);
+
+            foreach (string person in selectedPeople)
+                Console.WriteLine(person);
+
+        }
+        static void Hello()
+        {
+            Console.WriteLine("Hello");
+        }
+        static void Bye()
+        {
+            Console.WriteLine("Bye");
+        }
+
+        delegate void Message();
+        static void Main(string[] args)
+        {
+            Task11();
             Console.ReadKey();
         }
 

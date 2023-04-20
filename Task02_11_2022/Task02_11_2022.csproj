@@ -47,12 +47,18 @@
     <Compile Include="ButtonPhone.cs" />
     <Compile Include="Camera.cs" />
     <Compile Include="Employer.cs" />
+    <Compile Include="Job\Developer.cs" />
+    <Compile Include="Job\ICode.cs" />
+    <Compile Include="Job\ILaw.cs" />
+    <Compile Include="Job\Lawyer.cs" />
+    <Compile Include="Job\Work.cs" />
     <Compile Include="My\Car.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Phone.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Smartphone.cs" />
+    <Compile Include="Stati\Dog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
